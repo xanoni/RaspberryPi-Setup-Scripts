@@ -34,7 +34,7 @@ deb [arch=$(dpkg --print-architecture)]     https://deb.torproject.org/torprojec
 #deb-src [arch=$(dpkg --print-architecture)] https://deb.torproject.org/torproject.org buster main
 EOF
 
-sudo apt update && sudo apt install tor deb.torproject.org-keyring
+sudo apt update && sudo apt install -y tor deb.torproject.org-keyring
 
 
 ###
@@ -83,5 +83,13 @@ sudo apt install -y nodejs
 
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
 echo "deb [arch=$(dpkg --print-architecture)] https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
-sudo apt update && sudo apt install yarn
+sudo apt update && sudo apt install -y yarn
+
+
+###
+### sysbench — https://github.com/akopytov/sysbench#linux
+###
+
+curl -s https://packagecloud.io/install/repositories/akopytov/sysbench/script.deb.sh | sudo bash
+sudo apt install -y sysbench
 
