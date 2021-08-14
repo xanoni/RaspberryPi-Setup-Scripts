@@ -1,3 +1,5 @@
+#! /usr/bin/env -S bash -ex
+
 ###
 ### Refresh packages and get the basics ready
 ###
