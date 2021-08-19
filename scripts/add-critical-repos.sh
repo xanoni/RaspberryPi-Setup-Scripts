@@ -1,6 +1,11 @@
 #! /usr/bin/env -S bash -ex
 
 ###
+### Adds external repos for:
+### i2pd, Tor, Whonix, Docker, Node.js, Yarn, sysbench
+###
+
+###
 ### Refresh packages and get the basics ready
 ###
 
